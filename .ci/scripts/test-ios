@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 set +u
-rbenv shell 2.5.0
+# rbenv shell 2.5.0
 set -u
 bundle install --quiet
 xcodebuild -project "ProcedureKit.xcodeproj" -scheme "iOS" -destination "platform=iOS Simulator,name=iPhone X" clean test | tee .ci/results/xcodebuild.log | xcpretty
